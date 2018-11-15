@@ -19,6 +19,8 @@
 
 <div class="job-ranking"></div>
 
+ <#import "/page/macros.ftl" as cro/>
+                <@cro.page pageInfo=page url="${url}"/>
 
 
 </body>
