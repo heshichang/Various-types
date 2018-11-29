@@ -41,9 +41,7 @@ public class Test {
 //            System.out.println("abc"=="abc");
         Date date = new Date();
         int b = 0;
-        for (int i = 0;i<1000000;i++){
-           System.out.println(b);
-        }
+
         Date date1 = new Date();
 
         System.out.println((date1.getTime()-date.getTime()));
