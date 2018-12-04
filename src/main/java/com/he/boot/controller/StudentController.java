@@ -29,6 +29,7 @@ public class StudentController {
     @Autowired
     private JdbcTemplate jdbcTemplate;
 
+    @LoginAnnotation
     @GetMapping("/test")
     public String test(Model model){
         model.addAttribute("msg","消息");

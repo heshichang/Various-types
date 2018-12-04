@@ -1,6 +1,7 @@
 package com.he.boot.aspect;
 
 import com.he.boot.entity.Student;
+import lombok.extern.slf4j.Slf4j;
 import org.aspectj.lang.annotation.AfterReturning;
 import org.aspectj.lang.annotation.Aspect;
 import org.springframework.stereotype.Component;
@@ -12,11 +13,11 @@ import org.springframework.stereotype.Component;
  */
 @Aspect
 @Component
+@Slf4j
 public class LoginAspect {
-
     @AfterReturning(returning = "a",pointcut = "@annotation(com.he.boot.aspect.annotation.LoginAnnotation)")
     public String testAspect(String a){
-        System.out.println("shishi"+a);
+        log.info("进入到注解");
         return a;
     }
 }

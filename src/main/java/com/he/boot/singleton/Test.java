@@ -15,7 +15,7 @@ public class Test {
 
     public static void main(String[] args) {
         //测试单例
-/*        SingletonThread singletonThread = new SingletonThread();
+    /*    SingletonThread singletonThread = new SingletonThread();
         List<Thread> singletonThreadList = new ArrayList<>();
         for(int i = 1; i<6;i++){
             Thread thread = new Thread(singletonThread,"线程"+i);
@@ -23,8 +23,8 @@ public class Test {
         }
         singletonThreadList.forEach(th->{
             th.start();
-        });*/
-
+        });
+*/
         //测试静态代理
         User user = new User();
         user.setPermission("普通用户");

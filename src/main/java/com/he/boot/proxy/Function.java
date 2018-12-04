@@ -5,6 +5,5 @@ package com.he.boot.proxy;
  * @CreateDate: 2018/11/28
  */
 public interface Function {
-
     void doThing();
 }

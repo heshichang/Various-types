@@ -15,7 +15,6 @@ public class SingletonThread implements Runnable{
     public void run() {
             synchronized (SingletonThread.class){
                 log.info(Singleton2.INSTANCE.hashCode()+"");
-                // log.info(Singleton1.getSingleton1().hashCode()+Thread.currentThread().getName());
             }
     }
 }

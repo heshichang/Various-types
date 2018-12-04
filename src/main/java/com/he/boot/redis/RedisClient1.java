@@ -13,7 +13,6 @@ public class RedisClient1 implements Runnable {
     private Jedis jedis;
     private String lockKey;
     private int expireTime;
-
     public RedisClient1(Jedis jedis, String lockKey, int expireTime) {
         this.jedis = jedis;
         this.lockKey = lockKey;

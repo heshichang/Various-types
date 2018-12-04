@@ -14,21 +14,14 @@ import java.util.UUID;
  * @CreateDate: 2018/11/3 13:54
  */
 public class RedisTest {
-    private static volatile boolean permission = true;
 
     public static void main(String[] args) {
-
         Jedis jedis = new Jedis("localhost",6379);
-        Jedis jedis1 = new Jedis("localhost",6379);
-        //RedisClient redisClient = new RedisClient(jedis,"aple",4000);
-        RedisClient1 redisClient = new RedisClient1(jedis,"order",2000);
-        RedisClient1 redisClient1 = new RedisClient1(jedis1,"order",2000);
+        RedisClient redisClient = new RedisClient(jedis,"order",2000);
         Thread c = new Thread(redisClient,"顾客1");
-        Thread c1 = new Thread(redisClient1,"顾客2");
+        Thread c1 = new Thread(redisClient,"顾客2");
         c1.start();
         c.start();
-
-
     }
 
 

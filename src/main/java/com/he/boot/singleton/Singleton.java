@@ -9,13 +9,10 @@ import lombok.extern.slf4j.Slf4j;
  */
 @Slf4j
 public class Singleton {
-
     private static volatile Singleton singleton;
-
     private Singleton(){
         log.info("实例化");
     }
-
     public static Singleton getSingleton(){
         if(singleton == null){
             synchronized (Singleton.class){
@@ -26,6 +23,4 @@ public class Singleton {
         }
         return singleton;
     }
-
-
 }
