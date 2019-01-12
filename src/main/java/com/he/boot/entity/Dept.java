@@ -9,4 +9,7 @@ import lombok.Data;
 @Data
 public class Dept {
     private String name;
+
+    private double salary;
+    private int age;
 }

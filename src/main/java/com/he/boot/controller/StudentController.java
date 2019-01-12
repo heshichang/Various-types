@@ -1,20 +1,16 @@
 package com.he.boot.controller;
 
-import com.fasterxml.jackson.databind.ObjectMapper;
+import com.baomidou.kisso.annotation.Action;
+import com.baomidou.kisso.annotation.Login;
 import com.he.boot.aspect.annotation.LoginAnnotation;
 import com.he.boot.entity.Generic;
 import com.he.boot.entity.Student;
 import com.he.boot.service.StudentService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.jdbc.core.CallableStatementCreator;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.ResponseBody;
-
-import java.util.ArrayList;
-import java.util.List;
 
 /**
  * @Description:
@@ -55,6 +51,7 @@ public class StudentController {
     }
 
     @GetMapping("/joint")
+    @Login(action = Action.Normal)
     public String joit(Model model){
         model.addAttribute("students",studentService.selectAll());
         return "joint";
@@ -73,6 +70,12 @@ public class StudentController {
         }
 
         return "success";
+    }
+
+    @GetMapping("/login")
+    public String login(Integer uid){
+
+        return "joint";
     }
 
 }

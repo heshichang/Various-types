@@ -96,18 +96,21 @@ public class StringTest {
                 "      <p class=\"image-1543854704169\"></p><p>据日经 12 月 3 日报道，目前日本国内唯一的 BP 机服务运营商 Tokyo Telemessage 宣布，由于签约数量减少，将于 2019 年 9 月底结束服务，结束 BP 机在日本长达半个世纪的历史。</p><p>目前，Tokyo Telemessage 在东京都等 4 个都县提供服务，是日本国内唯一提供 BP 机服务的运营商。由于签约数低于 1500 件，该公司决定停止服务。不过，今后将继续提供采用 BP 机电波的防灾信息服务。（来源：日经中文网）</p><p><br></p><p>头图来源：Nikkei Asian Review</p></div></div>";
 
 
-        int a = content.indexOf("<img", 0);
-        int b = content.indexOf(">", a);
-        log.info(a+"--"+b);
-        log.info(content.substring(a,b+1));
-        //System.out.println(content.replace(content.substring(a,b+1),""));
-        while(content.contains("<img")){
-            int c = content.indexOf("<img", 0);
-            int d = content.indexOf(">", c);
-            content = content.replace(content.substring(c,d+1),"");
+//        int a = content.indexOf("<img", 0);
+//        int b = content.indexOf(">", a);
+//        log.info(a+"--"+b);
+//        log.info(content.substring(a,b+1));
+//        //System.out.println(content.replace(content.substring(a,b+1),""));
+//        while(content.contains("<img")){
+//            int c = content.indexOf("<img", 0);
+//            int d = content.indexOf(">", c);
+//            content = content.replace(content.substring(c,d+1),"");
+//
+//        }
+//        System.out.println(content);
 
-        }
-        System.out.println(content);
+        String content1 = "放好久奥斯卡";
+        log.info(content1.substring(0,1));
 
 
 //        String str="access_token=7BBFBDAE62CA6B9EC0F4B4E810F1C38C&expires_in=7776000&refresh_token=579B4051EF86407B82CC5E2AF9434F8B";
