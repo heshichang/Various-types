@@ -23,6 +23,7 @@
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <java.version>1.8</java.version>
         <kisso.version>3.7.1</kisso.version>
+        <java-jwt.version>3.4.0</java-jwt.version>
     </properties>
 
     <dependencies>
@@ -99,6 +100,13 @@
             <groupId>com.baomidou</groupId>
             <artifactId>kisso</artifactId>
             <version>${kisso.version}</version>
+        </dependency>
+
+        <!--jwt-->
+        <dependency>
+            <groupId>com.auth0</groupId>
+            <artifactId>java-jwt</artifactId>
+            <version>${java-jwt.version}</version>
         </dependency>
 
     </dependencies>
