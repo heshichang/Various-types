@@ -1,6 +1,5 @@
 package com.he.boot.aspect;
 
-import com.he.boot.entity.Student;
 import lombok.extern.slf4j.Slf4j;
 import org.aspectj.lang.annotation.AfterReturning;
 import org.aspectj.lang.annotation.Aspect;
